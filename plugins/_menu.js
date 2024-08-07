@@ -43,13 +43,17 @@ Sparky(
                 timeZone: "Asia/Kolkata"
             })
             .split(",");
-            let menu = `•  owner : ${BOT_INFO.split(";")[1]}
-✰  𝐌ᴏᴅᴇ : ${WORK_TYPE}
-✰  𝐏ʀᴇꜰɪx : ${HANDLERS}
-✰  𝐃ᴀᴛᴇ : ${date}
-✰  𝐓ɪᴍᴇ : ${time}
-✰  𝐔ᴩᴛɪᴍᴇ : ${await m.uptime()}
-✰  𝐏ʟᴜɢɪɴꜱ : ${commands.length}\n ${readMore}\n\n`
+            let menu = `*╭━━━〔 𝐗ᴏᴜʟ 𝐒ᴇʀ ⁩〕━━━━···▸*
+*┃ ╭─────────────···▸*
+*┃ │Oᴡɴᴇʀ : ${BOT_INFO.split(";")[1]}*
+*┃ │Mᴏᴅᴇ : ${WORK_TYPE}*
+*┃ │Pʀᴇꜰɪx : ${HANDLERS}*
+*┃ │Tɪᴍᴇ : ${time}*
+*┃ │Dᴀᴛᴇ : ${date}*
+*┃ │Uᴩᴛɪᴍᴇ : ${await m.uptime()}*
+*┃ │Pʟᴜɢɪɴꜱ : ${commands.length}*
+*┃ ╰─────────────···▸*
+*╰━━━━━━━━━━━━━━━━···▸\n\n*`
             let cmnd = [];
             let Sparky;
             let type = [];
@@ -79,7 +83,7 @@ Sparky(
             });
             cmnd.sort();
             type.sort().forEach((cmmd) => {
-                menu+= `\n     *${cmmd}*\n\n`
+                                    menu += `\n*╭━━━━━━━━━━━━━━━━━···▸*\n*┃  ╭─────────────┅┄▻*\n*┃  │  ${cmmd}*\n*┃  ╰┬────────────┅┄▻*\n*┃  ┌┤*\n`;
                 let comad = cmnd.filter(({
                     category
                 }) => category == cmmd)
@@ -87,11 +91,13 @@ Sparky(
                 comad.forEach(({
                     Sparky
                 }, num) => {
-                   menu += `• ${Sparky.trim()}\n`
+                   menu += `*┃  │ ☆ _${Sparky.trim()}_*\n`
                  });
+                                    menu += `*┃  ╰──────────────···▸*
+                                    *╰━━━━━━━━━━━━━━━━━···▸*\n`;
              });
            
-        let sperky = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "displayName": "X BOT MD V3","vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
+        let sperky = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "displayName": "𝑺 𝜟 𝜝 𝜟 𝜞 𝛪 /// 🌩️","vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
         return await client.sendMessage(m.jid , { text : font.tiny(menu),
 contextInfo: { externalAdReply: {                                           
 title: font.tiny(`Hey there  ${m.pushName}`),
